@@ -52,18 +52,6 @@ def send_message(text, chat_id, reply_markup=None):
     get_url(url)
 
 
-# def echo_all(updates):
-#     for update in updates["result"]:
-#         try:
-#             text = update["message"]["text"]
-#             chat = update["message"]["chat"]["id"]
-#             send_message(text, chat)
-#         except Exception as e:
-#             print(e)
-
-# text, chat = get_last_chat_id_and_text(get_updates())
-# send_message(text, chat)
-
 def handle_updates(updates):
     for update in updates["result"]:
         text = update["message"]["text"]
